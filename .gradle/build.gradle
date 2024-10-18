@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'io.github.serenity-bdd.aggregator' version '3.3.3'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'net.serenity-bdd:serenity-core:3.3.3'
+    testImplementation 'net.serenity-bdd:serenity-screenplay:3.3.3'
+    testImplementation 'net.serenity-bdd:serenity-screenplay-webdriver:3.3.3'
+    testImplementation 'net.serenity-bdd:serenity-cucumber6:3.3.3'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.6.0'
+    testImplementation 'io.cucumber:cucumber-java:7.4.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.4.0'
+}
+
+serenity {
+    requirementsBaseDir = 'src/test/resources/features'
+}
